@@ -12,22 +12,38 @@
 
 #include "libft.h"
 
+/**
+ * Aplica una función a cada carácter de una cadena de caracteres, creando una nueva cadena
+ * con los resultados de la función aplicada.
+ * 
+ * @param s Cadena de caracteres a la que se aplicará la función.
+ * @param f Función que se aplicará a cada carácter de la cadena. La función toma como argumentos
+ *          el índice del carácter y el propio carácter.
+ * @return Un puntero a la nueva cadena con los resultados de la función aplicada,
+ *         o NULL si la asignación de memoria falla o si los argumentos son nulos.
+ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int	i;
-	char			*ptr;
+    unsigned int	i;
+    char			*ptr;
 
-	if (!s || !f)
-		return (NULL);
-	ptr = (char *)malloc(ft_strlen(s) + 1);
-	if (!ptr)
-		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		ptr[i] = f(i, s[i]);
-		i++;
-	}
-	ptr[i] = '\0';
-	return (ptr);
+    // Verifica si los argumentos son nulos
+    if (!s || !f)
+        return (NULL);
+    // Asigna memoria para la nueva cadena
+    ptr = (char *)malloc(ft_strlen(s) + 1);
+    // Si la asignación de memoria falla, retorna NULL
+    if (!ptr)
+        return (NULL);
+    i = 0;
+    // Aplica la función a cada carácter de la cadena original
+    while (s[i])
+    {
+        ptr[i] = f(i, s[i]);
+        i++;
+    }
+    // Asegura que la nueva cadena esté terminada en nulo
+    ptr[i] = '\0';
+    // Retorna el puntero a la nueva cadena
+    return (ptr);
 }
