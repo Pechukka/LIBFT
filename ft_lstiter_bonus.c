@@ -12,11 +12,18 @@
 
 #include "libft.h"
 
+/**
+ * Aplica una función a cada contenido de los nodos de una lista enlazada.
+ * 
+ * @param lst Puntero al primer nodo de la lista.
+ * @param f Función a aplicar a cada contenido de los nodos.
+ */
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (lst)
-	{
-		f(lst->content);
-		lst = lst->next;
-	}
+    // Recorre la lista y aplica la función a cada contenido de los nodos
+    while (lst)
+    {
+        f(lst->content);
+        lst = lst->next;
+    }
 }

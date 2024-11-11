@@ -10,12 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * Verifica si un carácter es una letra del alfabeto (mayúscula o minúscula).
+ * 
+ * @param c Carácter a verificar.
+ * @return 1 si el carácter es una letra del alfabeto (mayúscula o minúscula),
+ *         o 0 si el carácter no es una letra del alfabeto.
+ */
 int	ft_isalpha(int c)
 {
-	int	ans;
-
-	ans = 0;
-	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
-		ans = 1;
-	return (ans);
+// Verifica si el carácter es una letra minúscula o mayúscula
+    if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
+        return (1);
+    // Retorna 1 si es una letra, 0 en caso contrario
+    return (0);
 }

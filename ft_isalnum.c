@@ -10,12 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * Verifica si un carácter es una letra del alfabeto (mayúscula o minúscula)
+ * o un dígito decimal (0-9).
+ * 
+ * @param c Carácter a verificar.
+ * @return 1 si el carácter es una letra del alfabeto (mayúscula o minúscula)
+ *         o un dígito decimal (0-9), o 0 si no lo es.
+ */
 int	ft_isalnum(int c)
 {
-	int	ans;
-
-	ans = 0;
-	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90) || (c >= 48 && c <= 57))
-		ans = 1;
-	return (ans);
+    // Verifica si el carácter es una letra minúscula, mayúscula o un dígito decimal
+    if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90) || (c >= 48 && c <= 57))
+        return (1);
+    // Retorna 0 si no es una letra ni un dígito
+    return (0);
 }

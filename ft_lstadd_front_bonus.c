@@ -12,8 +12,16 @@
 
 #include "libft.h"
 
+/**
+ * Añade un nuevo nodo al principio de una lista enlazada.
+ * 
+ * @param lst Puntero al puntero del primer nodo de la lista.
+ * @param new Puntero al nuevo nodo a añadir.
+ */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new->next = *lst;
-	*lst = new;
+    // Establece el puntero al siguiente nodo del nuevo nodo como el primer nodo actual
+    new->next = *lst;
+    // Actualiza el puntero del primer nodo para que apunte al nuevo nodo
+    *lst = new;
 }

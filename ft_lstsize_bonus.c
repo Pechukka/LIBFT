@@ -12,15 +12,22 @@
 
 #include "libft.h"
 
+/**
+ * Cuenta el número de nodos en una lista enlazada.
+ * 
+ * @param lst Puntero al primer nodo de la lista.
+ * @return El número de nodos en la lista.
+ */
 int	ft_lstsize(t_list *lst)
 {
-	int	i;
+    int	i;
 
-	i = 0;
-	while (lst != NULL)
-	{
-		++i;
-		lst = lst->next;
-	}
-	return (i);
+    i = 0;
+    // Recorre la lista y cuenta los nodos
+    while (lst != NULL)
+    {
+        ++i;
+        lst = lst->next;
+    }
+    return (i);
 }

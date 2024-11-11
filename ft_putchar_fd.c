@@ -12,7 +12,14 @@
 
 #include "libft.h"
 
+/**
+ * Escribe un carácter en un descriptor de archivo especificado.
+ * 
+ * @param c Carácter a escribir.
+ * @param fd Descriptor de archivo en el que se escribirá el carácter.
+ */
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+    // Escribe el carácter en el descriptor de archivo
+    write(fd, &c, 1);
 }

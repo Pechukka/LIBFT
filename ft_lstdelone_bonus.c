@@ -12,8 +12,17 @@
 
 #include "libft.h"
 
+/**
+ * Elimina y libera un nodo de una lista enlazada, utilizando una función de eliminación
+ * proporcionada para liberar el contenido del nodo.
+ * 
+ * @param lst Puntero al nodo a eliminar.
+ * @param del Función de eliminación para liberar el contenido del nodo.
+ */
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	del(lst->content);
-	free (lst);
+    // Llama a la función de eliminación para liberar el contenido del nodo
+    del(lst->content);
+    // Libera la memoria del nodo
+    free(lst);
 }

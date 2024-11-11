@@ -12,15 +12,24 @@
 
 #include "libft.h"
 
+/**
+ * Añade un nuevo nodo al final de una lista enlazada.
+ * 
+ * @param lst Puntero al puntero del primer nodo de la lista.
+ * @param new Puntero al nuevo nodo a añadir.
+ */
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*last;
+    t_list	*last;
 
-	if (*lst == NULL)
-		*lst = new;
-	else
-	{
-		last = ft_lstlast(*lst);
-		last->next = new;
-	}
+    // Si la lista está vacía, el nuevo nodo se convierte en el primer nodo
+    if (*lst == NULL)
+        *lst = new;
+    else
+    {
+        // Encuentra el último nodo de la lista
+        last = ft_lstlast(*lst);
+        // Añade el nuevo nodo al final de la lista
+        last->next = new;
+    }
 }

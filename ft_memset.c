@@ -12,36 +12,28 @@
 
 #include "libft.h"
 
+/**
+ * Llena un bloque de memoria con un valor específico.
+ * 
+ * @param s Puntero al bloque de memoria a llenar.
+ * @param c Valor a establecer en cada byte del bloque de memoria.
+ * @param n Número de bytes a establecer.
+ * @return Un puntero al bloque de memoria.
+ */
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t			i;
-	unsigned char	*strs;
+    size_t			i;
+    unsigned char	*strs;
 
-	strs = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		strs[i] = c;
-		i++;
-	}
-	return (s);
+    // Convierte el puntero a unsigned char para manipular byte a byte
+    strs = (unsigned char *)s;
+    i = 0;
+    // Llena el bloque de memoria byte a byte con el valor especificado
+    while (i < n)
+    {
+        strs[i] = c;
+        i++;
+    }
+    // Retorna el puntero al bloque de memoria
+    return (s);
 }
-/*
-#include <stdio.h>
-
-int	main(void) {
-	// Define un buffer de 50 bytes
-	char buffer[20];
-
-	// Llena todo el buffer con el carácter 'A'
-	ft_memset(buffer, 65, 10);
-	ft_memset(buffer + 10, 'x', 10);
-
-	// Imprime el contenido del buffer
-	for (int i = 0; i < 50; i++) {
-		printf("%c ", buffer[i]);
-	}
-
-	return (0);
-}
-*/
