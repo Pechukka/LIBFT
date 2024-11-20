@@ -1,4 +1,4 @@
-# LIBFT_42MALAGA
+# LIBFT
 
 ![Libft](https://img.shields.io/badge/Libft-42Malaga-blue)
 
