@@ -23,6 +23,7 @@
 int		ft_toupper(int c); // Convierte un carácter a mayúscula
 int		ft_tolower(int c); // Convierte un carácter a minúscula
 
+
 // Funciones de manipulación de cadenas
 char	*ft_strrchr(const char *s, int c); // Encuentra la última aparición de un carácter en una cadena
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len); // Encuentra una subcadena en una cadena
@@ -33,12 +34,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize); // Concatena dos 
 char	*ft_strdup(const char *s1); // Duplica una cadena
 char	*ft_strchr(const char *s, int c); // Encuentra la primera aparición de un carácter en una cadena
 
+
 // Funciones de manipulación de memoria
 void	*ft_memset(void *b, int c, size_t len); // Llena un bloque de memoria con un valor específico
 void	*ft_memmove(void *dst, const void *src, size_t len); // Copia un bloque de memoria, manejando superposición
 void	*ft_memcpy(void *dst, const void *src, size_t n); // Copia un bloque de memoria
 int		ft_memcmp(const void *s1, const void *s2, size_t n); // Compara dos bloques de memoria
 void	*ft_memchr(const void *s, int c, size_t n); // Busca un carácter en un bloque de memoria
+
 
 // Funciones de verificación de caracteres
 int		ft_isprint(int c); // Verifica si un carácter es imprimible
@@ -47,14 +50,14 @@ int		ft_isascii(int c); // Verifica si un carácter pertenece al conjunto ASCII
 int		ft_isalpha(int c); // Verifica si un carácter es una letra del alfabeto
 int		ft_isalnum(int c); // Verifica si un carácter es una letra o un dígito
 
+
 // Funciones de gestión de memoria
 void	*ft_calloc(size_t nmemb, size_t size); // Asigna memoria para un array y establece todos los bytes a cero
 void	ft_bzero(void *s, size_t n); // Establece todos los bytes de un bloque de memoria a cero
 
-// Funciones de conversión
-int		ft_atoi(const char *str); // Convierte una cadena a un número entero
 
 // Funciones de manipulación de cadenas avanzadas
+int		ft_atoi(const char *str); // Convierte una cadena a un número entero
 char	*ft_substr(char const *s, unsigned int start, size_t len); // Extrae una subcadena de una cadena
 char	*ft_strjoin(char const *s1, char const *s2); // Concatena dos cadenas en una nueva cadena
 char	*ft_strtrim(char const *s1, char const *set); // Elimina caracteres específicos de ambos extremos de una cadena
@@ -63,11 +66,17 @@ char	*ft_itoa(int n); // Convierte un número entero a una cadena
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char)); // Aplica una función a cada carácter de una cadena
 void	ft_striteri(char *s, void (*f)(unsigned int, char *)); // Aplica una función a cada carácter de una cadena, modificando la cadena
 
+
 // Funciones de escritura en archivos
 void	ft_putchar_fd(char c, int fd); // Escribe un carácter en un descriptor de archivo
 void	ft_putstr_fd(char *s, int fd); // Escribe una cadena en un descriptor de archivo
 void	ft_putendl_fd(char *s, int fd); // Escribe una cadena seguida de un salto de línea en un descriptor de archivo
 void	ft_putnbr_fd(int n, int fd); // Escribe un número entero en un descriptor de archivo
+
+
+/*
+-------------------------------LISTAS ENLAZADAS-------------------------------------
+*/
 
 // Definición de la estructura de un nodo de lista enlazada
 typedef struct s_list
